@@ -35,6 +35,7 @@ namespace ConsoleApp1
         {
             string StateOfCow;
             public string StateOfCow1 { get => StateOfCow; set => StateOfCow = value; }
+
             public MooEventArgs(string state)
             {
                 this.StateOfCow = state;
