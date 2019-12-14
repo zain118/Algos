@@ -31,44 +31,64 @@ namespace ConsoleApp1
         //    }
         //}
 
-        public class MooEventArgs : EventArgs
-        {
-            string StateOfCow;
-            public string StateOfCow1 { get => StateOfCow; set => StateOfCow = value; }
+        //public class MooEventArgs : EventArgs
+        //{
+        //    string StateOfCow;
+        //    public string StateOfCow1 { get => StateOfCow; set => StateOfCow = value; }
 
-            public MooEventArgs(string state)
-            {
-                this.StateOfCow = state;
-            }
+        //    public MooEventArgs(string state)
+        //    {
+        //        this.StateOfCow = state;
+        //    }
+        //}
+
+        //public class Cow {
+        //    public event EventHandler<MooEventArgs> Moo;
+        //    public string Name { get; set; }
+        //    public void EventRaised()
+        //    {
+        //        if(Moo != null)
+        //        {
+        //            Moo(this, new MooEventArgs("Dead"));
+        //        }
+        //    }
+        //}
+        //public static void giggle(Object sender, MooEventArgs args)
+        //{
+        //    Cow gotcha = sender as Cow;
+        //    Console.WriteLine(gotcha.Name);
+        //    if(args.StateOfCow1 == "Dead")
+        //    {
+        //        Console.WriteLine("Steeeeaks");
+        //    }
+        //}
+        public static void callMe(Derived b) {
+
+            b.No
         }
 
-        public class Cow {
-            public event EventHandler<MooEventArgs> Moo;
-            public string Name { get; set; }
-            public void EventRaised()
-            {
-                if(Moo != null)
-                {
-                    Moo(this, new MooEventArgs("Dead"));
-                }
-            }
+        public class Base {
+            public int No;
         }
-        public static void giggle(Object sender, MooEventArgs args)
-        {
-            Cow gotcha = sender as Cow;
-            Console.WriteLine(gotcha.Name);
-            if(args.StateOfCow1 == "Dead")
-            {
-                Console.WriteLine("Steeeeaks");
-            }
+        public class Derived : Base {
+            public int Yes;
         }
+
         public static void Main(string[] args)
         {
-            Cow betsy = new Cow { Name = "Betsy" };
-            betsy.Moo += giggle;
-            Cow georgy = new Cow { Name = "Georgy" };
-            georgy.Moo += giggle;
-            betsy.EventRaised();
+
+            Derived d = new Derived();
+            Base b = new Base();
+            callMe(d);
+            Base c = new Derived();
+            Derived e = new Base();
+
+
+            //Cow betsy = new Cow { Name = "Betsy" };
+            //betsy.Moo += giggle;
+            //Cow georgy = new Cow { Name = "Georgy" };
+            //georgy.Moo += giggle;
+            //betsy.EventRaised();
 
 
 
