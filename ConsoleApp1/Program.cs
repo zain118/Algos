@@ -7,9 +7,20 @@ using System.Threading.Tasks;
 //using static ConsoleApp1.LinkList;
 using static ConsoleApp1.BST;
 using Microsoft.SharePoint.Client;
+using System.Threading;
 
 namespace ConsoleApp1
 {
+    public class PrintAll
+    {
+        public void Print()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine(i + " - " + Thread.CurrentThread.Name);
+            }
+        }
+    }
     class Program
     {
 
@@ -62,26 +73,80 @@ namespace ConsoleApp1
         //        Console.WriteLine("Steeeeaks");
         //    }
         //}
-        public static void callMe(Derived b) {
+        //public static void callMe(Derived b) {
 
-            b.No
-        }
+        //    b.No
+        //}
 
-        public class Base {
-            public int No;
+        //public class Base {
+        //    public int No;
+        //}
+        //public class Derived : Base {
+        //    public int Yes;
+        //}
+        class Customer {
+           public  string Name { get; set; }
+            public string Company { set; get; }
+            public Customer(string name, string company)
+            {
+                this.Name = name;
+                this.Company = company;
+            }
         }
-        public class Derived : Base {
-            public int Yes;
+        class Base
+        {
+            public int b1;
+            public int b2;
+            public Base() { }
+            public Base(int d1, int d2)
+            {
+                this.b1 = d1;
+                this.b2 = d2;
+            }
+            public virtual void bf1() { Console.WriteLine("Base - b1"); }
         }
-
+        class Derived : Base
+        {
+            public int d1;
+            public int d2;
+            public int b1;
+            public Derived(int d1, int d2):base(50,60)
+            {
+                this.d1 = d1;
+                this.d2 = d2;
+            }
+            public override void bf1() { Console.WriteLine("Derived - d1"); }
+        }
+       
         public static void Main(string[] args)
         {
 
-            Derived d = new Derived();
-            Base b = new Base();
-            callMe(d);
-            Base c = new Derived();
-            Derived e = new Base();
+            Derived d = new Derived(10,20);
+            Console.WriteLine($"{d.d1} {d.d2}");
+
+            Base b = new Derived(20, 30);
+            //b.b1 = 1000;
+            
+            Console.WriteLine($"{b.b1} {b.b2}");
+            b.bf1();
+           // Console.WriteLine($"{d.d1} {d.d2}");
+
+            //Console.WriteLine($"{d.d1} {d.d2}");
+
+            //PrintAll p = new PrintAll();
+            //Thread t = new Thread(new ThreadStart(p.Print()));
+            //t.Start();
+            //List<Customer> li = new List<Customer> { new Customer("1", "2"), new Customer("3", "4"), new Customer("5", "6") };
+            //var result = Enumerable.Where(li, n => n.Name == "3"));
+
+            //foreach(var rt in result)
+            //    Console.WriteLine($"{rt.Name} : {rt.Company}");
+
+            //Derived d = new Derived();
+            //Base b = new Base();
+            //callMe(d);
+            //Base c = new Derived();
+            //Derived e = new Base();
 
 
             //Cow betsy = new Cow { Name = "Betsy" };
