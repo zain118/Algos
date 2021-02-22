@@ -228,22 +228,79 @@ namespace ConsoleApp1
 
             //*************************************************************        GRAPH ************************************************************************
 
-            List<int[]> edges = new List<int[]>{ new int[] {0,1}, new int[] {0, 2}, new int[] { 1, 3 }, new int[] {2, 3}, new int[] { 3, 4}, new int[] {5, 6}, new int[] { 6, 7 } };
+            //List<int[]> edges = new List<int[]>{ new int[] {0,1}, new int[] {0, 2}, new int[] { 1, 3 }, new int[] {2, 3}, new int[] { 3, 4}, new int[] {5, 6}, new int[] { 6, 7 } };
 
-            List<List<int>> adj = Graph.CreateDirectedAdj(edges, 8);
-            List<int> lt = Graph.bfsOfGraph(8, adj);
-            //List<int>  lt = Graph.RecursiveDFS(8, adj);
-            for (int k = 0; k < lt.Count; k++)
-            {
-                Console.WriteLine(lt[k]);
-            }
+            //List<List<int>> adj = Graph.CreateDirectedAdj(edges, 8);
+            //List<int> lt = Graph.bfsOfGraph(8, adj);
+            ////List<int>  lt = Graph.RecursiveDFS(8, adj);
+            //for (int k = 0; k < lt.Count; k++)
+            //{
+            //    Console.WriteLine(lt[k]);
+            //}
+
+            //string str = Console.ReadLine();
+            //string[] words = str.Split(' ');
+            //Strings.GroupOfAnagrams(words);
 
 
 
 
 
+            //string str1 = Console.ReadLine();
+            //int n = Convert.ToInt32(str1);
+            //string str = Console.ReadLine();
+            //string[] words = str.Split(' ');
+            //int[] arr = new int[n];
+            //for (int k = 0; k < n; k++)
+            //{
+            //    arr[k] = Convert.ToInt32(words[k]);
+            //}
+            //Arrays.MoveZeroesLinearTime(arr, n);
+            //Arrays.MaxDiff(arr);
+            //Arrays.FrequencySorted(arr);
+            //Arrays.FrequencyUnSorted(arr);
+            //Arrays.StockBuySellGFG(new int[] { 4,2,2,2,4});
+            // Wrong this is Arrays.RotatedSorted(new int[] { 3,4, 1, 2 }, 4);
+            //Arrays.LongestEvenOdd(new int[] { 10,12,8,4 });
+            //Arrays.BinarySearch(new int[] { 2, 3, 4, 5, 7, 8, 10}, 24);
+            //Arrays.FindMissing(new int[] { 2, 3,4, 5, 6,7, 8, 9, 10 });
+            //Arrays.SmallestMisPos(new int[] { -34, -45, -2, -1, 0, 1, 2 });
+            //Console.WriteLine(  Arrays.MaxCircularSubArray(new int[] { 4,-22,6,-45, 7,5,-89,7,10 }));
 
 
+            //Recursion.NoOfDigits(0);
+            //foreach (var item in Recursion.SortArr(new List<int>() { 2, 6, 4, 8, 1 }))
+            //{
+            //    Console.WriteLine(item);
+            //} 
+            //foreach (var item in Recursion.RemoveMidInStack(new Stack<int>(new int[] { 1, 2, 3, 4, 5, 6 }), 6))
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //foreach (var item in Recursion.ReverseStack(new Stack<int>(new int[] { 1, 2, 3, 4, 5, 6 })))
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Recursion.PrintSubsetUpperLower("a1b", "");
+            //Recursion.PrintSubset("abc", "");
+
+
+            //Recursion.TOH(10, 20, 30, 2);
+
+            //Recursion.Josephus(3,2);
+            //Strings.substrings("1111");
+            //Console.WriteLine(Strings.isRotated("amazon", "azonam"));
+
+
+            //string st = "geeksforgee";
+            //Console.WriteLine(st[(Strings.LeftIndexRepeated(st))]);
+
+            //Console.WriteLine(Strings.LeftIndexNonRepeat("hqghumeaylnlfdxfircvscxggbwkfnqduxwfnfozvs"));
+
+
+            //Console.WriteLine(Strings.reverseWords("i.like.this.program.very.much"));
 
         }
 
